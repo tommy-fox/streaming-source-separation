@@ -15,6 +15,9 @@ from Mozilla's Common Voice dataset and 7000 samples from the UrbanSound8k datas
 
 <b>Usage:</b><br>
 The repository must be obtained using git LFS, as the model sizes required large file storage.
+```
+git lfs clone https://github.com/tommy-fox/open-unmix-real-time-stream.git
+```
 
 Given the provided models, the program can separate sung vocals from a musical mix or speech from environmental noise.<br>
 When evaluating music files, either sung vocals or the backing instruments may be extracted.
