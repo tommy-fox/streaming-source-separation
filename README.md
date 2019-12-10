@@ -29,3 +29,9 @@ python3 unmix_stream.py path_to_music_wav_file instrumental
 ```
 python3 unmix_stream.py path_to_noisy_speech_wav_file speech
 ```
+<b>References:</b><br>
+Stöter, F.R., Uhlich, S., Liutkus, A., Mitsufuji, Y. (2019). Open-Unmix - A Reference Implementation for Music Source Separation. Journal of Open Source Software, Open Journals, 4(41), 1667.
+
+Mozilla (2017). Mozilla Common Voice. https://voice.mozilla.org/en
+
+Salamon, J., Jacoby, C., & Bello, J. P. (2014, November). A dataset and taxonomy for urban sound research. In Proceedings of the 22nd ACM international conference on Multimedia (pp. 1041-1044). ACM.
