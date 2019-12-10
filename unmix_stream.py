@@ -64,7 +64,7 @@ def unmix_separate_streamer(unmix_model, blocks, mode):
         # Send separated audio to output
         audio_queue.put(separated_output)
         
-def write_audio_from_file(stream):
+def write_audio_to_speakers(stream):
     while True:
         try:
             out_block = audio_queue.get()
@@ -114,8 +114,8 @@ p = pyaudio.PyAudio()
 
 stream = p.open(
                 format    = pyaudio.paFloat32,
-                channels  = 1,
-                rate      = RATE*2,
+                channels  = 2,
+                rate      = RATE,
                 input     = False,
                 output    = True)
 
@@ -143,7 +143,7 @@ if __name__ == '__main__':
         thread.start_new_thread(unmix_separate_streamer, (unmix_model,blocks,mode))
         
         # Run consumer of separated audio to play to speakers
-        thread.start_new_thread(write_audio_from_file, (stream,))
+        thread.start_new_thread(write_audio_to_speakers, (stream,))
              
         # Wait until file is finished playing
         time.sleep(duration)
