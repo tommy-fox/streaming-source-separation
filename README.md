@@ -30,8 +30,12 @@ python3 unmix_stream.py path_to_music_wav_file instrumental
 python3 unmix_stream.py path_to_noisy_speech_wav_file speech
 ```
 <b>References:</b><br>
-Stöter, F.R., Uhlich, S., Liutkus, A., Mitsufuji, Y. (2019). Open-Unmix - A Reference Implementation for Music Source Separation. Journal of Open Source Software, Open Journals, 4(41), 1667.
+Stöter, F.R., Uhlich, S., Liutkus, A., Mitsufuji, Y. (2019). Open-Unmix - A Reference Implementation for Music Source Separation. Journal of Open Source Software, Open Journals, 4(41), 1667.<br>
+[Open-Unmix Repository](https://github.com/sigsep/open-unmix-pytorch/blob/master/README.md)
 
-Mozilla (2017). Mozilla Common Voice. https://voice.mozilla.org/en
+Mozilla (2017). Mozilla Common Voice.<br> 
+[Common Voice Dataset](https://voice.mozilla.org/en)
 
-Salamon, J., Jacoby, C., & Bello, J. P. (2014, November). A dataset and taxonomy for urban sound research. In Proceedings of the 22nd ACM international conference on Multimedia (pp. 1041-1044). ACM.
+
+Salamon, J., Jacoby, C., & Bello, J. P. (2014, November). A dataset and taxonomy for urban sound research. In Proceedings of the 22nd ACM international conference on Multimedia (pp. 1041-1044). ACM.<br>
+[UbanSound Dataset Paper](https://www.researchgate.net/profile/Justin_Salamon/publication/267269056_A_Dataset_and_Taxonomy_for_Urban_Sound_Research/links/544936af0cf2f63880810a84/A-Dataset-and-Taxonomy-for-Urban-Sound-Research.pdf)
