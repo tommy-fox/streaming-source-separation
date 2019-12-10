@@ -17,13 +17,13 @@ def load_audio_blocks(filename, frame_length, block_length, hop_length):
     
     # Separate audio file into overlapping blocks
     blocks = sf.blocks(filename,
-                       blocksize=frame_length + (block_length - 1) * hop_length,
-                       overlap=frame_length - hop_length,
-                       fill_value=None,
-                       start=0,
-                       frames=-1,                     
-                       dtype=np.float32,
-                       always_2d=False)
+                       blocksize  = frame_length + (block_length - 1) * hop_length,
+                       overlap    = frame_length - hop_length,
+                       fill_value = None,
+                       start      = 0,
+                       frames     = -1,
+                       dtype      = np.float32,
+                       always_2d  = False)
     return blocks
 
 # Read audio from the input queue and put in the separated audio queue
