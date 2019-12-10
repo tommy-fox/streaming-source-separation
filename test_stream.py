@@ -16,7 +16,7 @@ import io
 import time
 import os
 
-def load_model(target, model_type, model_name='vocals', device='cpu'):
+def load_model(target, device='cpu'):
     """
     target model path can be either <target>.pth, or <target>-sha256.pth
     (as used on torchub)
@@ -68,7 +68,6 @@ def istft(X, rate=44100, n_fft=4096, n_hopsize=1024):
 def separate(
     audio,
     targets,
-    model_type,
     unmix_target,
     h_t_minus1,
     c_t_minus1,

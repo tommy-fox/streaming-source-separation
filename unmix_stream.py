@@ -48,7 +48,6 @@ def unmix_separate_streamer(unmix_model, blocks, mode):
                                                                        residual_model = False,
                                                                        niter          = 1,
                                                                        device         = 'cpu',
-                                                                       model_type     = 'uni',
                                                                        unmix_target   = unmix_model,
                                                                        h_t_minus1     = h_t_minus1,
                                                                        c_t_minus1     = c_t_minus1)
@@ -125,13 +124,11 @@ if (len(sys.argv) != 3):
 
 # Load model
 if(mode == 'instrumental' or 'acapella'):
-    unmix_model = test_stream.load_model(model_type = 'music',
-                                         target     = 'sung_vocals',
+    unmix_model = test_stream.load_model(target     = 'sung_vocals',
                                          device     = device)
 
 elif(mode == 'speech'):
-    unmix_model = test_stream.load_model(model_type = 'speech',
-                                         target     = 'vocals',
+    unmix_model = test_stream.load_model(target     = 'vocals',
                                          device     = device)
 
 if __name__ == '__main__':
