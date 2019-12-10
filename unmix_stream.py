@@ -41,17 +41,17 @@ def unmix_separate_streamer(unmix_model, blocks, mode):
             tensor_list = [torch.from_numpy(audio_block[:,0]), torch.from_numpy(audio_block[:,0])]
             audio_block = torch.stack(tensor_list).T
         
-        estimate_buffer, h_t_minus1, c_t_minus1 = test_stream.separate(audio = audio_block,
-                                                                               softmask=True,
-                                                                               alpha=1.0,
-                                                                               targets=['vocals'],
-                                                                               residual_model=False,
-                                                                               niter=1,
-                                                                               device='cpu',
-                                                                               model_type='uni',
-                                                                               unmix_target = unmix_model,
-                                                                               h_t_minus1 = h_t_minus1,
-                                                                               c_t_minus1 = c_t_minus1)
+        estimate_buffer, h_t_minus1, c_t_minus1 = test_stream.separate(audio          = audio_block,
+                                                                       softmask       = True,
+                                                                       alpha          = 1.0,
+                                                                       targets        = ['vocals'],
+                                                                       residual_model = False,
+                                                                       niter          = 1,
+                                                                       device         = 'cpu',
+                                                                       model_type     = 'uni',
+                                                                       unmix_target   = unmix_model,
+                                                                       h_t_minus1     = h_t_minus1,
+                                                                       c_t_minus1     = c_t_minus1)
         
         # If seeking the instrumental, subtract vocal estimate from mix
         if(mode == 'instrumental'):
