@@ -86,6 +86,10 @@ def write_audio_to_speakers(stream):
             # Write to stream
             stream.write(out_binary)
 
+if ((len(sys.argv) != 3)):
+    print('Usage: unmix_stream_run.py, filepath (.wav file), model type (instrumental, acapella, or speech)')
+    sys.exit()
+
 # Read mode input by user (speech, acapella, or instrumental)
 mode = sys.argv[2]
 
@@ -116,10 +120,6 @@ stream = p.open(
                 rate      = RATE,
                 input     = False,
                 output    = True)
-
-if (len(sys.argv) != 3):
-    print('Usage: unmix_stream_run.py, filepath (.wav file), model type (instrumental, acapella, or speech)')
-    sys.exit()
 
 # Load model
 if(mode == 'instrumental' or 'acapella'):
