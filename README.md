@@ -14,7 +14,8 @@ and the spoken speech model was trained using a subset of 7000 examples <br>
 from Mozilla's Common Voice dataset and 7000 samples from the UrbanSound8k dataset of urban noise. 
 
 <b>Examples:</b><br>
-Given the provided models, the program can separate sung vocals from a musical mix or speech from environmental noise.<br>
+Given the provided models, the program can separate sung vocals from a musical mix <br>
+or speech from environmental noise.<br>
 When evaluating music files, either sung vocals or the backing instruments may be extracted.
 ```
 python3 unmix_stream.py path_to_music_wav_file acapelella
