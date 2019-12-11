@@ -35,12 +35,11 @@ def unmix_separate_streamer(unmix_model, blocks, mode):
 
     # Separate input buffer with Unmix
     for audio_block in blocks:
-        
-        # If separating spoken speech, force to false stereo
-        if(mode == 'speech'):
-            tensor_list = [torch.from_numpy(audio_block[:,0]), torch.from_numpy(audio_block[:,0])]
+        # If audio is mono, force to false stereo
+        if audio_block.ndim != 2:
+            tensor_list = [torch.from_numpy(audio_block[:]), torch.from_numpy(audio_block[:])]
             audio_block = torch.stack(tensor_list).T
-        
+            
         estimate_buffer, h_t_minus1, c_t_minus1 = test_stream.separate(audio          = audio_block,
                                                                        softmask       = True,
                                                                        alpha          = 1.0,
