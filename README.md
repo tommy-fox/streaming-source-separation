@@ -1,4 +1,4 @@
-# open-unmix-real-time-stream
+# open-unmix-real-time
 
 <b>Overview:</b><br>
 This project utilizes the Open-Unmix source separation modeling architecture <br>
