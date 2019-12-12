@@ -1,4 +1,4 @@
-# open-unmix-real-time
+# open-unmix-stream
 
 <b>Overview:</b><br>
 This project utilizes the Open-Unmix source separation modeling architecture <br>
@@ -18,7 +18,7 @@ Given the provided models, the program can separate sung vocals from a musical m
 or speech from environmental noise.<br>
 When evaluating music files, either sung vocals or the backing instruments may be extracted.
 ```
-python3 unmix_stream.py path_to_music_wav_file acapelella
+python3 unmix_stream.py path_to_music_wav_file acapella
 ```
 ```
 python3 unmix_stream.py path_to_music_wav_file instrumental
