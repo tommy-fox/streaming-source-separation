@@ -114,8 +114,7 @@ blocks = load_audio_blocks(filename, FRAME_LENGTH, BLOCK_LENGTH, HOP_LENGTH)
 # Create and open PyAudio stream
 p = pyaudio.PyAudio()
 
-stream = p.open(
-                format    = pyaudio.paFloat32,
+stream = p.open(format    = pyaudio.paFloat32,
                 channels  = 2,
                 rate      = RATE,
                 input     = False,
