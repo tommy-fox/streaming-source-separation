@@ -9,7 +9,6 @@ device = torch.device("cuda" if use_cuda else "cpu")
 import wave
 import _thread as thread
 from queue import Queue
-import time
 import sys
 
 # Load audio blocks from file
@@ -145,7 +144,9 @@ if __name__ == '__main__':
         time.sleep(duration)
         
     # Allow user to stop audio playback with CTRL+C
-    except KeyboardInterrupt as e:
+    except KeyboardInterrupt:
         print('\nQuitting...')
+        
+    finally:
         thread.alive = False
-        sys.exit(e)
+        sys.exit()

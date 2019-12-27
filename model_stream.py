@@ -216,6 +216,7 @@ class OpenUnmix(nn.Module):
         x = torch.tanh(x)
         
         # apply 3-layers of stacked LSTM
+        # cell and activation states are uninitialized on the first iteration
         if(h_t_minus1 is None):
             lstm_out = self.lstm(x)
         else:
@@ -244,7 +245,7 @@ class OpenUnmix(nn.Module):
         # since our output is non-negative, we can apply RELU
         x = F.relu(x) * mix
         
-        # Get h and c from pytorch
+        # Get current activation and cell states from LSTM
         h_t_minus1, c_t_minus1 = lstm_out[1]
 
         return x, h_t_minus1, c_t_minus1
