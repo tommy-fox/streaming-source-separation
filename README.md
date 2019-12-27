@@ -9,7 +9,7 @@ to produce separated audio to the loudspeakers in real-time. <br>
 The original Open-Unmix repository can be found [here](https://github.com/sigsep/open-unmix-pytorch/blob/master/README.md).
 
 Open-Unmix utilizes 3 bidirectional LSTM layers to generate a spectral mask of its targeted source.<br>
-The final separation is produced via Wiener filtering the original mixed signal with the estimated spectral mask.
+The final separation is produced by Wiener filtering the original mixed signal with the estimated spectral mask.
 
 The online, streaming version was accomplished by training unidirectional LSTM models <br>
 and implementing a producer-consumer multithreading system in Python. <br>
