@@ -25,13 +25,13 @@ Given the provided models, the program can separate sung vocals from a musical m
 or speech from environmental noise.<br>
 When evaluating music files, either sung vocals or the backing instruments may be extracted.
 ```
-python3 unmix_stream.py path_to_music_wav_file acapella
+python3 unmix_stream.py path_to_music_file.wav acapella
 ```
 ```
-python3 unmix_stream.py path_to_music_wav_file instrumental
+python3 unmix_stream.py path_to_music_file.wav instrumental
 ```
 ```
-python3 unmix_stream.py path_to_noisy_speech_wav_file speech
+python3 unmix_stream.py path_to_noisy_speech_file.wav speech
 ```
 <b>References:</b><br>
 Stöter, F.R., Uhlich, S., Liutkus, A., Mitsufuji, Y. (2019). Open-Unmix - A Reference Implementation for Music Source Separation. Journal of Open Source Software, Open Journals, 4(41), 1667.<br>
