@@ -1,4 +1,4 @@
-# open-unmix-stream
+# streaming-source-separation
 
 <b>Overview:</b><br>
 This project utilizes the Open-Unmix source separation modeling architecture <br>
