@@ -2,7 +2,7 @@
 
 <b>Overview:</b><br>
 This project utilizes the Open-Unmix source separation modeling architecture <br>
-to produce separated audio to the speakers in real-time. <br>
+to produce separated audio to the loudspeakers in real-time. <br>
 
 <img src = "https://camo.githubusercontent.com/b5a867eb9b7c0a0fa0d8dc90962628ea41a8a374/68747470733a2f2f646f63732e676f6f676c652e636f6d2f64726177696e67732f642f652f32504143582d317654506f516950776d6466455434705a68756531527647376f45554a7a376555655176437536767a59654b5277486c366279345252546e7068496d534b4d306b354b587739725a316949466e7047572f7075623f773d39353926683d333038">
 
@@ -14,7 +14,8 @@ The final separation is produced by Wiener filtering the original mixed signal w
 The online, streaming version was accomplished by training unidirectional LSTM models <br>
 and implementing a producer-consumer multithreading system in Python. <br>
 
-Included in the 'models' folder are trained models for sung vocals and spoken speech targets.
+Included in the 'models' folder are trained models for sung vocals and spoken speech targets.<br>
+These were uploaded using git lfs and may require lfs in order to obtain them locally.
 
 The model for sung vocals was trained using the MUSDB dataset <br>
 and the spoken speech model was trained using a subset of 7000 examples <br>
