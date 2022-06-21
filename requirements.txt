@@ -1,7 +1,7 @@
 certifi==2019.11.28
 cffi==1.13.2
 norbert==0.2.1
-numpy==1.18.0
+numpy==1.22.0
 PyAudio==0.2.11
 pycparser==2.19
 scipy==1.4.1
