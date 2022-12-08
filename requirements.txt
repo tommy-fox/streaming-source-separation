@@ -1,4 +1,4 @@
-certifi==2019.11.28
+certifi==2022.12.7
 cffi==1.13.2
 norbert==0.2.1
 numpy==1.18.0
